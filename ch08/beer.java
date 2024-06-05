@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Write a program that displays the entire lyrics of “99 Bottles of Beer”. Your
  * program should include a recursive method that does the hard part, but you
@@ -6,9 +8,20 @@
  * like 3.
  */
 
+ /**
+  * @author Sergey Ermolaev
+  * @version 1
+  */
+import java.util.Scanner;
+
 public class beer {
     public static void main(String[] args) {
-        System.out.println(noBeer(3));
+        Scanner in = new Scanner(System.in);
+        System.out.println("How many bottles? ");
+
+        int n = in.nextInt();
+
+        System.out.println(noBeer(n));
     }
     public static String noBeer(int n) {
         String lastString = "No bottles of beer on the wall, no bottles of beer, ya' can't take one down," +
